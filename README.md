@@ -27,7 +27,7 @@ $ sudo chcon -Rt svirt_sandbox_file_t /home/stack/authdir
 
 To use it run the following (Here overcloudrc file is under /home/stack/authdir):
 ```
-$ sudo docker run -it --name mytempest -v /home/stack/authdir:/env itzikb/docker-tempest  /bin/bash
+$ sudo docker run -it --name mytempest --net host -v /home/stack/authdir:/env itzikb/docker-tempest  /bin/bash
 ```
 **Note: Don't use the /home/stack directory as it may result in an unexpected behavior**
 
